@@ -10,11 +10,11 @@ describe('Party Horn Tests', () => {
   it('slider changes when volume input changes', () => {
       cy.get('#volume-slider').invoke('val', 67).trigger('input');
       cy.get('#volume-image').then($el => {
-          expect($el).to.have.attr('src', './assets/media/icons/volume-level-2.svg');
+          expect($el).to.have.attr('src', './assets/media/icons/volume-level-3.svg');
       });
       cy.get('#volume-slider').invoke('val', 34).trigger('input');
       cy.get('#volume-image').then($el => {
-          expect($el).to.have.attr('src', './assets/media/icons/volume-level-1.svg');
+          expect($el).to.have.attr('src', './assets/media/icons/volume-level-2.svg');
       });
       cy.get('#volume-slider').invoke('val', 1).trigger('input');
       cy.get('#volume-image').then($el => {
